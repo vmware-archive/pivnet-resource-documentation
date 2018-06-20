@@ -1,6 +1,40 @@
 ---
 layout: default
 ---
+# Hello!
+
+This page is an easy to understand explanation of how to use the Pivnet Resource in your pipelines to install [Pivotal](https://network.pivotal.io/) products! We'll walk you through how to use, setup, and integrate your pipelines to pull down the latest releases. 
+
+
+# Understanding Pivnet Resource
+
+In your pipeline, you will need to add the following under `resource_types`:
+
+```yaml
+---
+resource_types:
+- name: pivnet
+  type: docker-image
+  source:
+    repository: pivotalcf/pivnet-resource
+    tag: latest-final
+```
+
+And the following snippet under `resources`:
+
+```yaml
+resources:
+- name: p-mysql
+  type: pivnet
+  source:
+    api_token: {{api-token}}
+    product_slug: {{product-slug}}
+```
+
+
+The `api-token` can be obtained through 
+
+
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 

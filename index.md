@@ -57,6 +57,42 @@ Select the version from the dropdown:
 
 
 
+# Example
+
+A simple example of downloading the `stemcells` product can be seen [here](https://github.com/pivotal-cf/pivnet-resource/blob/master/examples/get-aws-vsphere-stemcells.yml).
+
+
+A slightly more complex example:
+
+```yaml
+resource_types:
+- name: pivnet
+  type: docker-image
+  source:
+    repository: pivotalcf/pivnet-resource
+    tag: latest-final
+
+resources:
+- name: healthwatch-product
+  type: pivnet
+  source:
+    api_token: ((pivnet_token))
+    product_slug: p-healthwatch
+    product_version: ((healthwatch_version))
+    sort_by: semver
+
+
+jobs:
+- name: get-healthwatch-product
+  plan:
+  - get: healthwatch-product
+    params:
+      globs: ["p-healthwatch*.pivotal"]
+    trigger: true
+```
+
+
+
 
 
 

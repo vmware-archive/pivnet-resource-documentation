@@ -33,7 +33,7 @@ resources:
 
 Each product you want to fetch from [Pivnet](https://network.pivotal.io) will have to be defined as its own resource. A resource has many attributes (which you can read about in more detail [here](https://github.com/pivotal-cf/pivnet-resource)), but the important ones to understand when fetching products are `api-token`, `product-slug`, and `product-version`. 
 
-## API_TOKEN
+### API_TOKEN
 The `api-token` can be obtained at: 
 
 ![Token](https://s3.amazonaws.com/pivnet-resource-page/tokenSelection.png)
@@ -42,14 +42,14 @@ Navigate here by going to your personal profile on [Pivnet](https://network.pivo
 
 
 
-## PRODUCT_SLUG
+### PRODUCT_SLUG
 The `product-slug` defines the product that you want to be fetching from [Pivnet](https://network.pivotal.io). You can see the product slug in the URL of each product.
 
 ![Slug](https://s3.amazonaws.com/pivnet-resource-page/pivnet-product-slug.png). 
 
 
 
-## PRODUCT_VERSION
+### PRODUCT_VERSION
 The `product-version` for each product is an optional field. If you do not specify it, it will pull down the latest release by default. To specify a specific product_version, select the release you wish to download from [Pivnet](https://network.pivotal.io) and specify the version. **Note:** This field takes a [regex](https://en.wikipedia.org/wiki/Regular_expression).
 
 Select the version from the dropdown:

@@ -35,13 +35,18 @@ Each product you want to fetch from [Pivnet](https://network.pivotal.io) will ha
 
 ## API_TOKEN
 The `api-token` can be obtained at: 
+
 ![Token](https://s3.amazonaws.com/pivnet-resource-page/tokenSelection.png)
 
 Navigate here by going to your personal profile on [Pivnet](https://network.pivotal.io). Note that you can use either the legacy token or the UAA Refresh token. Read more details about how the difference between the tokens and how they work [here](https://network.pivotal.io/docs/api#how-to-authenticate).
 
+
+
 ## PRODUCT_SLUG
 The `product-slug` defines the product that you want to be fetching from [Pivnet](https://network.pivotal.io). You can see the product slug in the URL of each product.
+
 ![Slug](https://s3.amazonaws.com/pivnet-resource-page/pivnet-product-slug.png). 
+
 
 
 ## PRODUCT_VERSION

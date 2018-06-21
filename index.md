@@ -11,7 +11,7 @@ Before you begin, you will need the following:
 
 # Get Started with Pivnet Resource
 
-The first thing you need to is define the resource type. In your pipeline, you will need to add the following under `resource_types`:
+The first thing you need to do is define the resource type. In your pipeline, you will need to add the following snippet under `resource_types`:
 
 ```yaml
 ---
@@ -24,7 +24,7 @@ resource_types:
 ```
 
 
-Each product you want to fetch from [Pivotal Network](https://network.pivotal.io) will have to be defined as its own resource (in the example below, we are pulling two products). A resource has many attributes (which you can read about in more detail [here](https://github.com/pivotal-cf/pivnet-resource)), but the important ones to understand when fetching products are [api-token](#api_token), [product-slug](#product_slug), and [product-version](#product_version). 
+Each product you want to fetch from [Pivotal Network](https://network.pivotal.io) will have to be defined as its own resource (in the example below, we are pulling two products). Pivnet Resource has many [attributes](https://github.com/pivotal-cf/pivnet-resource)), but the important ones to understand when fetching products are [api-token](#api_token), [product-slug](#product_slug), and [product-version](#product_version). 
 
 
 ```yaml
@@ -49,7 +49,7 @@ resources:
 ### API_TOKEN
 To get your `api-token`, navigate to your personal profile on [Pivotal Network](https://network.pivotal.io). Note that you can use either the legacy token or the UAA refresh token. Read more details about how the difference between the tokens and how they work [here](https://network.pivotal.io/docs/api#how-to-authenticate). Your token profile selection screen will look similar to:
 
-![Token](https://s3.amazonaws.com/pivnet-resource-page/tokenSelection.png)
+![Token](https://raw.githubusercontent.com/pivotal-cf/pivnet-resource-page.github.io/master/pivnet-profile.png)
 
 
 

@@ -1,6 +1,6 @@
 # Pivnet Resource
 
-The [Pivnet Resource](https://github.com/pivotal-cf/pivnet-resource) can be used in your [concourse](https://concourse-ci.org/) pipeline to download product releases from [Pivotal Network](https://network.pivotal.io/). This page will walk you through how to use, setup, and integrate the Pivnet Resource in your Concourse pipeline.
+The [Pivnet Resource](https://github.com/pivotal-cf/pivnet-resource) can be used in your [Concourse](https://concourse-ci.org/) pipeline to download product releases from [Pivotal Network](https://network.pivotal.io/). This page will walk you through how to use, setup, and integrate the Pivnet Resource in your Concourse pipeline.
 
 Before you begin, you will need the following:
 

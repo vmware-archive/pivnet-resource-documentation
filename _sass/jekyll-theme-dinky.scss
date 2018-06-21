@@ -27,6 +27,7 @@ time, mark, audio, video {
 $color-white: #FFFFFF;
 $color-default-background: #FBFAF7;
 $color-pivotal-green: #00b7a8;
+$color-hyperlink: #0077CC;
 
 /* Base text styles */
 
@@ -81,7 +82,7 @@ h4, h5, h6 {
 }
 
 a {
-  color:#C30000;
+  color: $color-hyperlink;
   font-weight:200;
   text-decoration:none;
 }

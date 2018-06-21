@@ -24,7 +24,7 @@ resource_types:
 ```
 
 
-Each product you want to fetch from [Pivotal Network](https://network.pivotal.io) will have to be defined as its own resource (in the example below, we are pulling two products). A resource has many attributes (which you can read about in more detail [here](https://github.com/pivotal-cf/pivnet-resource)), but the important ones to understand when fetching products are [api-token](#API_TOKEN), [product-slug](#PRODUCT_SLUG), and [product-version](#PRODUCT_VERSION). 
+Each product you want to fetch from [Pivotal Network](https://network.pivotal.io) will have to be defined as its own resource (in the example below, we are pulling two products). A resource has many attributes (which you can read about in more detail [here](https://github.com/pivotal-cf/pivnet-resource)), but the important ones to understand when fetching products are [api-token](#api_token), [product-slug](#product_slug), and [product-version](#product_version). 
 
 
 ```yaml

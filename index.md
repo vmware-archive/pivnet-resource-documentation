@@ -45,7 +45,7 @@ resources:
     # no product_version is defined, so the latest release will be pulled
 ```
 
-Each product you want to fetch from [Pivotal Network](https://network.pivotal.io) will have to be defined as its own resource (in the example above, it is `product-to-fetch-from-pivnet`). A resource has many attributes (which you can read about in more detail [here](https://github.com/pivotal-cf/pivnet-resource)), but the important ones to understand when fetching products are `api-token`, `product-slug`, and `product-version`. 
+Each product you want to fetch from [Pivotal Network](https://network.pivotal.io) will have to be defined as its own resource (in the example above, we are pulling two products). A resource has many attributes (which you can read about in more detail [here](https://github.com/pivotal-cf/pivnet-resource)), but the important ones to understand when fetching products are `api-token`, `product-slug`, and `product-version`. 
 
 ### API_TOKEN
 To get your `api-token`, navigate to your personal profile on [Pivotal Network](https://network.pivotal.io). Note that you can use either the legacy token or the UAA refresh token. Read more details about how the difference between the tokens and how they work [here](https://network.pivotal.io/docs/api#how-to-authenticate). Your token profile selection screen will look similar to:

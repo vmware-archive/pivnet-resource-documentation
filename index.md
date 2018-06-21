@@ -2,13 +2,14 @@
 
 The [Pivnet Resource](https://github.com/pivotal-cf/pivnet-resource) can be used in your [concourse](https://concourse-ci.org/) pipeline to download product releases from [Pivotal Network](https://network.pivotal.io/). Before you begin, you will need the following:
 
-1. A concourse pipeline
+1. A [concourse](https://concourse-ci.org/) pipeline
 2. Access to the Internet
-3. A [Pivnet](https://network.pivotal.io) account
+3. A [Pivotal Network](https://network.pivotal.io) account
 
 This page will walk you through how to use, setup, and integrate the Pivnet Resource in your Concourse pipeline.
 
-# Understanding Pivnet Resource
+
+# Understanding the Resource
 
 In your pipeline, you will need to add the following under `resource_types`:
 
@@ -22,19 +23,26 @@ resource_types:
     tag: latest-final
 ```
 
-This defines the pivnet resource type you will use to pull down products from Pivnet.
+This defines the pivnet resource type you will use to pull down products from Pivotal Network.
 
 
 And the following snippet under `resources`:
 
 ```yaml
 resources:
-- name: product-to-fetch-from-pivnet
+- name: mysql-product
   type: pivnet
   source:
-    api_token: {{api-token}}
-    product_slug: {{product-slug}}
-    product_version: {{product-version}} # optional
+    api_token: my-token
+    product_slug: p-mysql
+    product_version: 1\.2\.3 # optional
+
+- name: cloudcache-product
+  type: pivnet
+  source:
+    api_token: my-token
+    product_slug: p-cloudcache 
+    # no product_version is defined, so the latest release will be pulled
 ```
 
 Each product you want to fetch from [Pivotal Network](https://network.pivotal.io) will have to be defined as its own resource (in the example above, it is `product-to-fetch-from-pivnet`). A resource has many attributes (which you can read about in more detail [here](https://github.com/pivotal-cf/pivnet-resource)), but the important ones to understand when fetching products are `api-token`, `product-slug`, and `product-version`. 
@@ -89,7 +97,13 @@ jobs:
       globs: ["p-healthwatch*.pivotal"]
 ```
 
+
 **Note:** The `globs` section refers to filenames in a release. Read more about the different parameters [here](https://github.com/pivotal-cf/pivnet-resource).
+
+
+
+
+
 
 
 

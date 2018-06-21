@@ -1,4 +1,3 @@
-
 # Hello!
 
 This page is an easy to understand explanation of how to use the Pivnet Resource in your pipelines to install [Pivotal](https://network.pivotal.io/) products! We'll walk you through how to use, setup, and integrate your pipelines to pull down the latest releases. 
@@ -34,11 +33,9 @@ resources:
 Each product you want to fetch from [Pivnet](https://network.pivotal.io) will have to be defined as its own resource. A resource has many attributes (which you can read about in more detail [here](https://github.com/pivotal-cf/pivnet-resource)), but the important ones to understand when fetching products are `api-token`, `product-slug`, and `product-version`. 
 
 ### API_TOKEN
-The `api-token` can be obtained at: 
+To get your `api-token`, navigate to your personal profile on [Pivnet](https://network.pivotal.io). Note that you can use either the legacy token or the UAA refresh token. Read more details about how the difference between the tokens and how they work [here](https://network.pivotal.io/docs/api#how-to-authenticate). Your token profile selection screen will look similar to:
 
 ![Token](https://s3.amazonaws.com/pivnet-resource-page/tokenSelection.png)
-
-Navigate here by going to your personal profile on [Pivnet](https://network.pivotal.io). Note that you can use either the legacy token or the UAA Refresh token. Read more details about how the difference between the tokens and how they work [here](https://network.pivotal.io/docs/api#how-to-authenticate).
 
 
 
@@ -50,7 +47,7 @@ The `product-slug` defines the product that you want to be fetching from [Pivnet
 
 
 ### PRODUCT_VERSION
-The `product-version` for each product is an optional field. If you do not specify it, it will pull down the latest release by default. To specify a specific product_version, select the release you wish to download from [Pivnet](https://network.pivotal.io) and specify the version. **Note:** This field takes a [regex](https://en.wikipedia.org/wiki/Regular_expression).
+The `product-version` refers to a release of a product. It is an optional field to specify on the resource. If you do not specify it, it will pull down the latest release  by default. To specify a specific product_version, select the release you wish to download from [Pivnet](https://network.pivotal.io) and specify the version. **Note:** This field takes a [regex](https://en.wikipedia.org/wiki/Regular_expression).
 
 Select the version from the dropdown:
 ![Version](https://s3.amazonaws.com/pivnet-resource-page/pivnet-product-version.png)
@@ -59,10 +56,7 @@ Select the version from the dropdown:
 
 # Example
 
-A simple example of downloading the `stemcells` product can be seen [here](https://github.com/pivotal-cf/pivnet-resource/blob/master/examples/get-aws-vsphere-stemcells.yml).
-
-
-A slightly more complex example:
+A simple example of downloading the [healthwatch](https://network.pivotal.io/products/p-healthwatch/) product can be seen below:
 
 ```yaml
 resource_types:
@@ -76,22 +70,20 @@ resources:
 - name: healthwatch-product
   type: pivnet
   source:
-    api_token: ((pivnet_token))
+    api_token: api-token
     product_slug: p-healthwatch
-    product_version: ((healthwatch_version))
-    sort_by: semver
-
+    product_version: 1\.1\.1
 
 jobs:
 - name: get-healthwatch-product
   plan:
   - get: healthwatch-product
+    trigger: true
     params:
       globs: ["p-healthwatch*.pivotal"]
-    trigger: true
 ```
 
-
+**Note:** The `globs` section refers to filenames in a release. Read more about the different parameters [here](https://github.com/pivotal-cf/pivnet-resource).
 
 
 

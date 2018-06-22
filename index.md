@@ -68,8 +68,7 @@ Select the version from the dropdown:
 
 
 # Example
-
-A simple example of downloading the [healthwatch](https://network.pivotal.io/products/p-healthwatch/) and [cloudcache](https://network.pivotal.io/products/p-cloudcache/) products can be seen below:
+Now that the major components of the Pivnet Resource have been understood, we can put it all together. An example of downloading the [healthwatch](https://network.pivotal.io/products/p-healthwatch/) and [cloudcache](https://network.pivotal.io/products/p-cloudcache/) products can be seen below:
 
 ```yaml
 ---
@@ -112,9 +111,4 @@ jobs:
 
 
 # Demo
-
-
-
-
-
 

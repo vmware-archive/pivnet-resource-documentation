@@ -255,7 +255,6 @@ h1.header {
 	margin-top: 0;
 }
 
-
 h1.header, a.header, a.name, header a{
 	color: #fff;
 }
@@ -279,15 +278,14 @@ header.menu li {
   height:15px;
   line-height: 1em;
   padding: 6px 6px 6px 7px;
+  background: none !important;
 }
 
-/*
 header.menu li:hover {
   background: none;
   border: 0;
   -webkit-box-shadow: none;
 }
-*/
 
 header li {
 	list-style-type: none;
@@ -310,7 +308,6 @@ header li {
 
 	-webkit-box-shadow: inset 0px 1px 1px 0 rgba(233,2,38, 1);
 	box-shadow: inset 0px 1px 1px 0 rgba(233,2,38, 1);
-
 }
 
 header li:hover {

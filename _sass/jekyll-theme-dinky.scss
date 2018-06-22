@@ -270,7 +270,7 @@ header ul {
   padding:0;
 }
 
-header.menu_wrapper li.menu_item {
+header div.menu_wrapper li.menu_item {
   list-style-type: none;
   width:132px;
   height:15px;
@@ -282,7 +282,7 @@ header.menu_wrapper li.menu_item {
   -webkit-box-shadow: none;
 }
 
-header.menu_wrapper li.menu_item:hover {
+header div.menu_wrapper li.menu_item:hover {
   background: none;
   border: 0;
   -webkit-box-shadow: none;

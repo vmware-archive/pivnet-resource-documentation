@@ -56,7 +56,7 @@ To get your `api-token`, navigate to your personal profile on [Pivotal Network](
 ### PRODUCT_SLUG
 The `product-slug` defines the product that you want to be fetching from [Pivotal Network](https://network.pivotal.io). You can see the product slug in the URL of each product.
 
-![Slug](https://raw.githubusercontent.com/pivotal-cf/pivnet-resource-page.github.io/master/pivnet-product-slug.png). 
+![Slug](https://raw.githubusercontent.com/pivotal-cf/pivnet-resource-page.github.io/master/pivnet-product-slug.png)
 
 
 

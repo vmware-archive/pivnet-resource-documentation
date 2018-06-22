@@ -1,4 +1,4 @@
 theme: jekyll-theme-dinky
-title: Understanding Pivnet Resource
+title: Pivnet Resource
 description: How to use the Pivnet Resource in your Concourse Pipelines
-
+url: https://pivotal-cf.github.io/pivnet-resource-page.github.io/

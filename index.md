@@ -4,7 +4,7 @@ The [Pivnet Resource](https://github.com/pivotal-cf/pivnet-resource) can be used
 
 Before you begin, you will need the following:
 
-1. A [concourse](https://concourse-ci.org/) pipeline
+1. A [Concourse](https://concourse-ci.org/) pipeline
 2. Access to the Internet
 3. A [Pivotal Network](https://network.pivotal.io) account
 

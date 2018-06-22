@@ -213,14 +213,12 @@ th {
 td {
   padding: 10px;
 	background: #ccc;
- }
-
+}
 
 /* Wrapper */
 .wrapper {
   width:960px;
 }
-
 
 /* Header */
 
@@ -255,7 +253,7 @@ h1.header {
 	margin-top: 0;
 }
 
-h1.header, a.header, a.name, header a{
+h1.header, a.header, a.name, header a { 
 	color: #fff;
 }
 
@@ -279,6 +277,9 @@ header.menu_wrapper li.menu_item {
   line-height: 1em;
   padding: 6px 6px 6px 7px;
   background: none !important;
+  box-shadow: none;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
 }
 
 header.menu_wrapper li.menu_item:hover {
@@ -346,7 +347,6 @@ section {
   float:right;
   padding-bottom:50px;
 }
-
 
 /* Footer */
 

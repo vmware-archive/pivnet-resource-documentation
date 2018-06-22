@@ -9,7 +9,7 @@ Before you begin, you will need the following:
 3. A [Pivotal Network](https://network.pivotal.io) account
 
 
-# Get Started with Pivnet Resource
+# Get Started
 
 The first thing you need to do is define the resource type. In your pipeline, you will need to add the following snippet under `resource_types`:
 
@@ -23,6 +23,8 @@ resource_types:
     tag: latest-final
 ```
 
+
+# Download Products
 
 Each product you want to fetch from [Pivotal Network](https://network.pivotal.io) will have to be defined as its own resource (in the example below, we are pulling two products). Pivnet Resource has many [attributes](https://github.com/pivotal-cf/pivnet-resource), but the important ones to understand when fetching products are [api-token](#api_token), [product-slug](#product_slug), and [product-version](#product_version). 
 

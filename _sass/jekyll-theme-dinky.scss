@@ -273,14 +273,21 @@ header ul {
   padding:0;
 }
 
-header li.menu {
+header.menu li {
   list-style-type: none;
   width:132px;
   height:15px;
-  margin-bottom: 12px;
   line-height: 1em;
   padding: 6px 6px 6px 7px;
 }
+
+/*
+header.menu li:hover {
+  background: none;
+  border: 0;
+  -webkit-box-shadow: none;
+}
+*/
 
 header li {
 	list-style-type: none;

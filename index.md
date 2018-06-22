@@ -24,7 +24,7 @@ resource_types:
 ```
 
 
-Each product you want to fetch from [Pivotal Network](https://network.pivotal.io) will have to be defined as its own resource (in the example below, we are pulling two products). Pivnet Resource has many [attributes](https://github.com/pivotal-cf/pivnet-resource)), but the important ones to understand when fetching products are [api-token](#api_token), [product-slug](#product_slug), and [product-version](#product_version). 
+Each product you want to fetch from [Pivotal Network](https://network.pivotal.io) will have to be defined as its own resource (in the example below, we are pulling two products). Pivnet Resource has many [attributes](https://github.com/pivotal-cf/pivnet-resource), but the important ones to understand when fetching products are [api-token](#api_token), [product-slug](#product_slug), and [product-version](#product_version). 
 
 
 ```yaml
@@ -67,7 +67,7 @@ Select the version from the dropdown:
 ![Version](https://raw.githubusercontent.com/pivotal-cf/pivnet-resource-page.github.io/master/pivnet-product-version.png)
 
 
-# Example
+# Sample Code
 Now that the major components of the Pivnet Resource have been understood, we can put it all together. An example of downloading the [healthwatch](https://network.pivotal.io/products/p-healthwatch/) and [cloudcache](https://network.pivotal.io/products/p-cloudcache/) products can be seen below:
 
 ```yaml

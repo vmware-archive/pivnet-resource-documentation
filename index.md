@@ -69,9 +69,10 @@ Select the version from the dropdown:
 
 # Example
 
-A simple example of downloading the [healthwatch](https://network.pivotal.io/products/p-healthwatch/) product can be seen below:
+A simple example of downloading the [healthwatch](https://network.pivotal.io/products/p-healthwatch/) and [cloudcache](https://network.pivotal.io/products/p-cloudcache/) products can be seen below:
 
 ```yaml
+---
 resource_types:
 - name: pivnet
   type: docker-image
@@ -83,23 +84,34 @@ resources:
 - name: healthwatch-product
   type: pivnet
   source:
-    api_token: api-token
+    api_token: ((api_token))
     product_slug: p-healthwatch
-    product_version: 1\.1\.1
+    product_version: 1\.2\.2
+
+- name: cloudcache-product
+  type: pivnet
+  source:
+    api_token: ((api_token))
+    product_slug: p-cloudcache
+    # no product_version is specified, so the latest release will be fetched
+
+- name: repo
+  type: git
+  source:
+    uri: git@github.com:pivotal-cf/repo.git
+    branch: master
 
 jobs:
-- name: get-healthwatch-product
+- name: get-products
   plan:
   - get: healthwatch-product
-    trigger: true
-    params:
-      globs: ["p-healthwatch*.pivotal"]
+  - get: cloudcache-product
+  - task: output-name
+    file: repo/ci/tasks/fetch.yml
 ```
 
 
-**Note:** The `globs` section refers to filenames in a release. Read more about the different parameters [here](https://github.com/pivotal-cf/pivnet-resource).
-
-
+# Demo
 
 
 
